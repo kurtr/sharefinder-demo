@@ -2,6 +2,9 @@ import colors from 'vuetify/es5/util/colors'
 import en from './locale/en'
 
 export default {
+  env: {
+    baseUrl: 'https://sharefinder.sane.cloud'
+  },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
@@ -67,14 +70,13 @@ export default {
       short_name: 'ShareFinder Mobile',
       description: 'ShareFinder Mobile Application',
       theme_color: '#1364a1',
-      start_url: '/?source=pwa ',
       scope: '/',
       display: 'standalone',
       shortcuts: [{
         name: 'Find Shares',
         short_name: 'Find',
         description: 'Find Shares on ShareFinder',
-        url: '/shares?source=pwa',
+        url: 'https://sharefinder.sane.cloud/shares?source=pwa',
         icons: [{
           src: '/icons/magnify.png',
           sizes: '192x192'
@@ -84,7 +86,7 @@ export default {
         name: 'View Share Prices',
         short_name: 'Share Prices',
         description: 'View Share Prices on ShareFinder',
-        url: '/prices?source=pwa',
+        url: 'https://sharefinder.sane.cloud/prices?source=pwa',
         icons: [{
           src: '/chart.png',
           sizes: '192x192'
